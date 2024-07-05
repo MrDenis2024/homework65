@@ -2,6 +2,7 @@ import './App.css';
 import Toolbar from './components/Toolbar/Toolbar';
 import {Route, Routes} from 'react-router-dom';
 import Pages from './containers/Pages/Pages';
+import ChangePage from './containers/ChangePage/ChangePage';
 
 const App = () => {
 
@@ -14,6 +15,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Pages />} />
           <Route path='/pages/:pageName' element={<Pages />} />
+          <Route path='/pages/admin' element={<ChangePage />} />
           <Route path='*' element={<div className="text-center mt-5"><strong>Данной страницы не найдено вернитесь
             пожалуйста обратно!</strong></div>} />
         </Routes>
